@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,6 +14,13 @@
 	<%@include file="all_component/navbar.jsp"%>
 
 
+	<c:if test="${empty userobj}">
+
+		<c:redirect url="login.jsp" />
+
+	</c:if>
+
+
 	<div class="container">
 
 		<div class="row p-3">
@@ -21,19 +30,24 @@
 
 					<div class="card-body">
 					<h3 class="text-center text-success">Add Address</h3>
-						<form action="">
+						<form action="userAddress" method="post">
+						
+							<div class="form-group col-md-6">
+									<input type="text"
+										class="form-control" id="inputPassword4" name="email" value="${userobj.email}" hidden="true">
+								</div>
 
 							<div class="form-row">
 
 								<div class="form-group col-md-6">
 									<label for="inputPassword4">Address</label> <input type="text"
-										class="form-control" id="inputPassword4">
+										class="form-control" id="inputPassword4" name="address">
 								</div>
 
 
 								<div class="form-group col-md-6">
 									<label for="inputPassword4">Landmark</label> <input type="text"
-										class="form-control" id="inputPassword4">
+										class="form-control" id="inputPassword4" name="landmark">
 								</div>
 
 							</div>
@@ -41,23 +55,21 @@
 
 								<div class="form-group col-md-4">
 									<label for="inputPassword4">City</label> <input type="text"
-										class="form-control" id="inputPassword4">
+										class="form-control" id="inputPassword4" name="city">
 								</div>
 								<div class="form-group col-md-4">
 									<label for="inputPassword4">State</label> <input type="text"
-										class="form-control" id="inputPassword4">
+										class="form-control" id="inputPassword4" name="state">
 								</div>
 								<div class="form-group col-md-4">
 									<label for="inputPassword4">Pincode</label> <input type="text"
-										class="form-control" id="inputPassword4">
+										class="form-control" id="inputPassword4" name="pincode">
 								</div>
 							</div>
 
 
                             <div class="text-center">
                             <button class="btn btn-warning text-white">Add Address</button>
-                            
-                            
                             </div>
 						</form>
 

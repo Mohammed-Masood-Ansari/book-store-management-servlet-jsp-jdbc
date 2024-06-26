@@ -36,11 +36,11 @@ public class LoginController extends HttpServlet {
 			else{
 				
 				User user = service.userLoginDaoByEmailDService(email, password);
-				System.out.println(user);
+				
 			if(user.getEmail() != null && user.getPassword() != null) {
 
-	
 					session.setAttribute("userobj", user);
+				
 					resp.sendRedirect("index.jsp");
 				}
 				else {
@@ -50,7 +50,7 @@ public class LoginController extends HttpServlet {
 			 		
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}
 		
 	}

@@ -35,6 +35,31 @@ public class Userdao {
 		return null;
 
 	}
+	
+	public int updateUserDetailsDao(User user) {
+		
+		String updateQuery = "update user set adress=?,landmark=?,city=?,state=?,pincode=? where email=?";
+		
+		try {
+			
+			System.out.println("updateUserDetailsDao");
+			PreparedStatement preparedStatement = connection.prepareStatement(updateQuery);
+
+			preparedStatement.setString(1, user.getAdress());
+			preparedStatement.setString(2, user.getLandmark());
+			preparedStatement.setString(3, user.getCity());
+			preparedStatement.setString(4, user.getState());
+			preparedStatement.setString(5, user.getPincode());
+			preparedStatement.setString(6, user.getEmail());
+			
+			return preparedStatement.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return 0;
+		}
+		
+	}
 
 	/***
 	 * userLoginDaoByEmail

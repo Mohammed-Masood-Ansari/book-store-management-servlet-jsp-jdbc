@@ -14,10 +14,26 @@ public class User {
 	private String city;
 	private String state;
 	private String pincode;
+	
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+	
+	public User(String email, String adress, String landmark, String city, String state, String pincode) {
+		super();
+		this.email = email;
+		this.adress = adress;
+		this.landmark = landmark;
+		this.city = city;
+		this.state = state;
+		this.pincode = pincode;
+	}
+
+
+
 	public int getId() {
 		return id;
 	}
