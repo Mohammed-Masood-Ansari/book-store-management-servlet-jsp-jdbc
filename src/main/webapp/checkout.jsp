@@ -141,27 +141,27 @@
 
 								<div class="form-group col-md-6">
 									<label for="inputPassword4">Address</label> <input type="text"
-										name="address" class="form-control" id="inputPassword4" required>
+										name="address" class="form-control" id="inputPassword4" value="${userobj.adress }" required>
 								</div>
 							</div>
 							<div class="form-row">
 								<div class="form-group col-md-6">
 									<label for="inputEmail4">Landmark</label> <input type="text"
-										name="landmark" class="form-control" id="inputEmail4"required>
+										name="landmark" class="form-control" id="inputEmail4" value="${userobj.landmark }" required>
 								</div>
 								<div class="form-group col-md-6">
 									<label for="inputPassword4">City</label> <input type="text"
-										name="city" class="form-control" id="inputPassword4"required>
+										name="city" class="form-control" id="inputPassword4" value="${userobj.city }" required>
 								</div>
 							</div>
 							<div class="form-row">
 								<div class="form-group col-md-6">
 									<label for="inputEmail4">State</label> <input type="text"
-										name="state" class="form-control" id="inputEmail4"required>
+										name="state" class="form-control" id="inputEmail4" value="${userobj.state }" required>
 								</div>
 								<div class="form-group col-md-6">
 									<label for="inputPassword4">PinCode</label> <input type="text"
-										name="pincode" class="form-control" id="inputPassword4"required>
+										name="pincode" class="form-control" id="inputPassword4" value="${userobj.pincode }" required>
 								</div>
 							</div>
 							<div class="form-group">

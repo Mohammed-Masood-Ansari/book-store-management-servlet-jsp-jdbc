@@ -77,10 +77,6 @@
 					<span class="sr-only">(current)</span>
 			</a></li>
 			<li class="nav-item active"><a class="nav-link"
-				href="all_recent.jsp"><i class="fas fa-book-open"></i>Recent
-					Book</a></li>
-
-			<li class="nav-item active"><a class="nav-link"
 				href="all_new_book.jsp"><i class="fas fa-book-open"></i>New Book</a></li>
 
 			<li class="nav-item active"><a class="nav-link disabled"
