@@ -7,14 +7,10 @@
 
 
 <div class="container-fluid p-3 bg-light">
-
 	<div class="row">
-
-
 		<div class="col-md-3 text-success">
-
+		
 			<h3>
-
 				<i class="fas fa-book"></i>Books
 			</h3>
 		</div>
