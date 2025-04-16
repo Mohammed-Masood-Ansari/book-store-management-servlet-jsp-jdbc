@@ -7,7 +7,7 @@ public class User {
 	private String name;
 	private String email;
 	private String password;
-	private String phno;
+	private long phno;
 	
 	private String adress;
 	private String landmark;
@@ -58,12 +58,21 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getPhno() {
+	
+	
+	
+	public long getPhno() {
 		return phno;
 	}
-	public void setPhno(String phno) {
+
+
+
+	public void setPhno(long phno) {
 		this.phno = phno;
 	}
+
+
+
 	public String getAdress() {
 		return adress;
 	}

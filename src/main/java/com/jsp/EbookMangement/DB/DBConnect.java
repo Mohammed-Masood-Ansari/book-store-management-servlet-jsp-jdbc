@@ -16,7 +16,7 @@ private  static Connection conn;
 			
 			Class.forName("com.mysql.cj.jdbc.Driver");
 		
-		String url="jdbc:mysql://localhost:3306/ebook-ap";
+		String url="jdbc:mysql://localhost:3306/e-book";
 		String user="root";
 		String pass="root";
 		

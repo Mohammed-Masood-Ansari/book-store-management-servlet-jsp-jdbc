@@ -22,7 +22,7 @@ public class UpdateProfile extends HttpServlet {
 			int id = Integer.parseInt(req.getParameter("id"));
 			String name = req.getParameter("name");
 			String email = req.getParameter("email");
-			String phno = req.getParameter("phno");
+			long phno = Long.parseLong(req.getParameter("phno"));
 			String password = req.getParameter("password");
 			
 			User user=new User();

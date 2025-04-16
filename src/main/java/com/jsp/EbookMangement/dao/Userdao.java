@@ -15,14 +15,14 @@ public class Userdao {
 	Connection connection = connect.getConn();
 
 	public User registerUserDao(User user) {
-		String Query = "insert into user(name,email,phno, password)  values(?,?,?,?) ";
+		String Query = "insert into user(name,email,phno,password)  values(?,?,?,?) ";
 
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(Query);
 
 			preparedStatement.setString(1, user.getName());
 			preparedStatement.setString(2, user.getEmail());
-			preparedStatement.setString(3, user.getPhno());
+			preparedStatement.setLong(3, user.getPhno());
 			preparedStatement.setString(4, user.getPassword());
 
 			preparedStatement.executeUpdate();
@@ -79,7 +79,7 @@ public class Userdao {
 				user.setId(resultSet.getInt(1));
 				user.setName(resultSet.getString(2));
 				user.setEmail(resultSet.getString(3));
-				user.setPhno(resultSet.getString(4));
+				user.setPhno(resultSet.getLong(4));
 				user.setPassword(resultSet.getString(5));
 				user.setAdress(resultSet.getString(6));
 				user.setLandmark(resultSet.getString(7));
@@ -128,7 +128,7 @@ public class Userdao {
 
 			preparedStatement.setString(1, user.getName());
 			preparedStatement.setString(2, user.getEmail());
-			preparedStatement.setString(3, user.getPhno());
+			preparedStatement.setLong(3, user.getPhno());
 			preparedStatement.setInt(4, user.getId());
 			int i = preparedStatement.executeUpdate();
 			if (i == 1) {
